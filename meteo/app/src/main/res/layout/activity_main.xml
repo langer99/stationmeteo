@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bleu" />
+
+
+    <!-- Ajout du titre "Station Météo" -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Station Météo"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"/>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="156dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:stretchColumns="*">
+
+        <!-- Titre du tableau -->
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Capteurs"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_column="2"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Température (°C)"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_column="3"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Humidité (%)"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Ligne pour DHT11 -->
+        <!-- Ajout de bordures aux cellules -->
+        <TableRow
+            android:background="@android:color/darker_gray"
+            android:gravity="center">
+
+            <TextView
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="DHT11"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dht11_temperature"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dht11_humidity"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Ligne pour DHT22 -->
+        <TableRow
+            android:background="@android:color/darker_gray"
+            android:gravity="center">
+
+            <TextView
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="DHT22"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dht22_temperature"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dht22_humidity"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Ligne pour BMP280 -->
+        <TableRow
+            android:background="@android:color/darker_gray"
+            android:gravity="center">
+
+            <TextView
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="BMP280"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/bmp280_temperature"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/bmp280_humidity"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
